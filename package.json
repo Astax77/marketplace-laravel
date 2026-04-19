@@ -3,11 +3,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-    "build": "npx vite build"
-}
+        "build": "npx vite build"
+    },
     "devDependencies": {
-    "vite": "^5.0.0",
-    "laravel-vite-plugin": "^1.0.0"
         "@tailwindcss/vite": "^4.0.0",
         "axios": "^1.11.0",
         "concurrently": "^9.0.1",
