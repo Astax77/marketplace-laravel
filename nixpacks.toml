@@ -1,7 +1,20 @@
-@@ -0,0 +1,6 @@
+[variables]
+NODE_ENV = "development"
+NPM_CONFIG_PRODUCTION = "false"
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "npm-9_x"]
+
+[phases.install]
+cmds = [
+    "npm install --include=dev",
+    "composer install --optimize-autoloader --no-interaction"
+]
+
 [phases.build]
 cmds = [
-    "npm install",
-    "npm run build",
-    "composer install --optimize-autoloader --no-dev"
+    "npm run build"
 ]
+
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
