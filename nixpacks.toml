@@ -1,6 +1,8 @@
+[variables]
+NODE_ENV = "development"
+
+[phases.install]
+cmds = ["npm install"]
+
 [phases.build]
-cmds = [
-    "npm install",
-    "npm run build",
-    "composer install --optimize-autoloader --no-dev"
-]
+cmds = ["npm run build", "composer install --optimize-autoloader --no-dev --no-interaction"]
